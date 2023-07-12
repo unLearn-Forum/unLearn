@@ -4,36 +4,27 @@ The mission of unLearn is to empower people to work for a greater purpose. We be
 
 Our primary objectives are as follows:
 
-a. Establish a decentralized network neighborhood within the Cardano ecosystem, promoting collaboration, inclusivity, and community participation.
-
-b. Foster a secure environment where participants can freely express their ideas, engage in constructive discussions, and contribute to the growth of the Neighborhood.
-
-c. Ensure fairness in project selection, funding allocation, and decision-making processes, while actively promoting diversity and inclusion among participants.
-
-d. Safeguard communities against harmful actors, misinformation, and unethical practices, promoting accountability and responsible governance.
+1. Establish a decentralized network neighborhood within the Cardano ecosystem, promoting collaboration, inclusivity, and community participation.
+2. Foster a secure environment where participants can freely express their ideas, engage in constructive discussions, and contribute to the growth of the Neighborhood.
+3. Ensure fairness in project selection, funding allocation, and decision-making processes, while actively promoting diversity and inclusion among participants.
+4. Safeguard communities against harmful actors, misinformation, and unethical practices, promoting accountability and responsible governance.
 
 
 Our proposed funding mechanism operates as follows:
 
-a. Proposal Submission: Any individual or group can submit a proposal to the DAO. Proposals can be categorized as governance actions or funding proposals.
-
-b. NFT Minting: Once a proposal is submitted, it is minted as a non-fungible token (NFT) on the Cardano blockchain. This NFT serves as a unique identifier for the proposal throughout its lifecycle.
-
-c. Community Interaction: The proposal is shared with the community for interaction and feedback. Participants can provide suggestions, offer funding amounts, and express their opinions through discussion forums or other designated channels.
-
-d. Proposal Update: Based on community input, the proposal is updated to reflect the outcomes, such as suggested funding amounts or modifications to the governance action. These updates are stored within the NFT datum.
-
-e. Voting: Members of the DAO participate in a voting process to determine the acceptance and funding allocation for each proposal. Voting can be conducted through a secure and transparent on-chain voting system.
-
-f. Proposal NFT Update: After the voting process concludes, the proposal NFT is updated with the voting results, including the approved funding amounts or the decision on the governance action.
-
-g. Claiming Funds: The proposer/holder of the proposal NFT can then claim the approved funding amount from the treasury using the proposal NFT as proof of approval.
+1. Proposal Submission: Any individual or group can submit a proposal to the DAO. Proposals can be categorized as governance actions or funding proposals.
+2. NFT Minting: Once a proposal is submitted, it is minted as a non-fungible token (NFT) on the Cardano blockchain. This NFT serves as a unique identifier for the proposal throughout its lifecycle.
+3. Community Interaction: The proposal is shared with the community for interaction and feedback. Participants can provide suggestions, offer funding amounts, and express their opinions through discussion forums or other designated channels.
+4. Proposal Update: Based on community input, the proposal is updated to reflect the outcomes, such as suggested funding amounts or modifications to the governance action. These updates are stored within the NFT datum.
+5. Voting: Members of the DAO participate in a voting process to determine the acceptance and funding allocation for each proposal. Voting can be conducted through a secure and transparent on-chain voting system.
+6. Proposal NFT Update: After the voting process concludes, the proposal NFT is updated with the voting results, including the approved funding amounts or the decision on the governance action.
+7. Claiming Funds: The proposer/holder of the proposal NFT can then claim the approved funding amount from the treasury using the proposal NFT as proof of approval.
 
 The governance system allows anyone to create a question or proposal, like in a forum. An NFT is minted by the proposer and locked in a validator script through a multi-sig transaction. In the same transaction, two additional NFTs are minted (proposal-x_A and proposal-x_R) and sent to the proposer and the script responsible for the voting process, respectively. If the proposal type is "Funding", a fourth NFT (proposal-x_Claim) is minted and sent to the proposer.
 
 In the first proposal to be minted, the genesis proposal, two Non-Fungible Tokens (NFTs) will be created: the unArxh NFT and the idaniko NFT. These two NFTs will be locked in the unArxh validator. The unArxh NFT contains the counter for the proposal NFTs (TxId) and other general information about the Decentralized Autonomous Organization (DAO). It is the beginning and the history of the DAO, so it will be updated in every proposal NFT mint. For that reason if the unArxh validator is empty, which will be only before the genesis proposal, the TxId will be set to 0. The idaniko NFT holds thee Neighborhood values.. The idaniko NFT will be locked in the unArxh validator. The validator will ensure that the idaniko NFT is never moved from there. This is to ensure that the unArxh validator address can never be empty again, so that the txId will not be set to 0 and another NFT proposal-0 is minted.
 
-a. The NFT (proposal_x) locked in the validator script contains a list of "metadata" with the "question", "type", and "name" fields filled in. The "answers" and "results" fields are empty. The list also contains the "datumState" which currently has the value "INIT" and the "datumAmount" which is set to 0.
+The NFT (proposal_x) locked in the validator script contains a list of "metadata" with the "question", "type", and "name" fields filled in. The "answers" and "results" fields are empty. The list also contains the "datumState" which currently has the value "INIT" and the "datumAmount" which is set to 0.
 
 
 ```
